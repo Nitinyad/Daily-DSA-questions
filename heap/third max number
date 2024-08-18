@@ -1,0 +1,28 @@
+//LEETCODE QUESTION LINK : https://leetcode.com/problems/third-maximum-number/
+
+class Solution {
+public:
+    int thirdMax(vector<int>& nums) {
+        set<int> dist(nums.begin() , nums.end());
+        priority_queue<int ,vector<int> , greater<int> > minh;
+        int n = dist.size();
+        if(n < 3 ){
+            for(auto it : dist){
+                minh.push(it);
+            }
+            int top = 0;
+            while(!minh.empty()){
+                top= minh.top();
+                minh.pop();
+            }
+            return top;
+        }
+        for(auto it : dist){
+            minh.push(it);
+            if(minh.size() > 3){
+                minh.pop();
+            }
+        }
+        return minh.top();
+    }
+};
