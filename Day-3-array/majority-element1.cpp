@@ -1,4 +1,6 @@
 
+// ---------------- MOORE'S VOTING ALGORITHM ------------------
+
 // WITHOUT USING MAP IF YOU WANT MAP WALA SOLUTION VISIT LEETCODE
 class Solution {
 public:
