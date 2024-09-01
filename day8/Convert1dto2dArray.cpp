@@ -20,7 +20,7 @@ public:
 
 
 //second approach -- important 
-// whenever we have to convert the 1d array to 2d array then , ( given the 1d array , row * col -- 2d array )
+// whenever we have to convert the 1d array to 2d array then , ( given 1d array and no. of row , no. of col of 2d array to make )
 // to find the particular element from 1d array goes to 2d array 
 // row = i / col;
 // col = i % col;
