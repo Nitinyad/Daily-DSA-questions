@@ -21,3 +21,29 @@ public:
         return solve(0 , 0 , s,t ,dp);
     }
 };
+
+
+//MEMORY LIMIT EXCEDD
+class Solution {
+public:
+    void solve(int ind , string s ,string t , string ds , int &cnt){
+        if(ind == s.size()){
+            if(ds == t){
+                cnt++;
+            }
+            return;
+        }
+        ds+=s[ind];
+        solve(ind+1 , s , t, ds, cnt);
+        ds.pop_back();
+        solve(ind+1 , s ,t ,ds,cnt);
+
+    }
+
+    int numDistinct(string s, string t) {
+        int cnt = 0;
+        string ds = "";
+        solve(0 , s , t , ds , cnt);
+        return cnt;
+    }
+};
